@@ -411,6 +411,8 @@
 				DEVELOPMENT_TEAM = 765F9357QN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirthdayAssignment/Base/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take a photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to pick a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -438,6 +440,8 @@
 				DEVELOPMENT_TEAM = 765F9357QN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirthdayAssignment/Base/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take a photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to pick a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
