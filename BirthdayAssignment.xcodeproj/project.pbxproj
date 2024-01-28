@@ -24,6 +24,8 @@
 		7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */; };
 		7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC812B66A8670069CA15 /* Baby.swift */; };
 		7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC832B66AA960069CA15 /* CameraView.swift */; };
+		7D3FAC872B66ABE60069CA15 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */; };
+		7D3FAC892B66AC0E0069CA15 /* BirthdayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		7D3FAC812B66A8670069CA15 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
 		7D3FAC832B66AA960069CA15 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
+		7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,8 @@
 		7D3FAC4B2B669FAF0069CA15 /* BirthdayAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				7D3FAC802B66A85F0069CA15 /* Model */,
 				7D3FAC602B669FF10069CA15 /* Base */,
+				7D3FAC802B66A85F0069CA15 /* Model */,
 				7D3FAC622B66A0000069CA15 /* Modules */,
 				7D3FAC612B669FF60069CA15 /* Resources */,
 				7D3FAC632B66A0050069CA15 /* Utility */,
@@ -92,10 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				7D3FAC5A2B669FB10069CA15 /* Info.plist */,
-				7D3FAC6D2B66A32B0069CA15 /* AppCoordinator.swift */,
 				7D3FAC4C2B669FAF0069CA15 /* AppDelegate.swift */,
-				7D3FAC6A2B66A2080069CA15 /* Constants.swift */,
 				7D3FAC4E2B669FAF0069CA15 /* SceneDelegate.swift */,
+				7D3FAC6D2B66A32B0069CA15 /* AppCoordinator.swift */,
+				7D3FAC6A2B66A2080069CA15 /* Constants.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3FAC6F2B66A4CF0069CA15 /* Login */,
+				7D3FAC852B66ABC50069CA15 /* Birthday */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -178,6 +183,15 @@
 				7D3FAC812B66A8670069CA15 /* Baby.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7D3FAC852B66ABC50069CA15 /* Birthday */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */,
+				7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */,
+			);
+			path = Birthday;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +269,7 @@
 				7D3FAC712B66A4DA0069CA15 /* LoginView.swift in Sources */,
 				7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */,
 				7D3FAC6B2B66A2080069CA15 /* Constants.swift in Sources */,
+				7D3FAC872B66ABE60069CA15 /* BirthdayViewModel.swift in Sources */,
 				7D3FAC692B66A0FA0069CA15 /* Coordinator.swift in Sources */,
 				7D3FAC732B66A4E30069CA15 /* LoginViewModel.swift in Sources */,
 				7D3FAC752B66A4EB0069CA15 /* LoginRouter.swift in Sources */,
@@ -265,6 +280,7 @@
 				7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */,
 				7D3FAC4F2B669FAF0069CA15 /* SceneDelegate.swift in Sources */,
 				7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */,
+				7D3FAC892B66AC0E0069CA15 /* BirthdayRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
