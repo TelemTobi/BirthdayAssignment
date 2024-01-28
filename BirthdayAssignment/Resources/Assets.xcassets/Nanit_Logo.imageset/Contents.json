@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Nanit_Logo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

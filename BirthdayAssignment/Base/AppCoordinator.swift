@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class AppCoordinator: Coordinator, LoginRouter {
+class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
     
     var window: UIWindow
     var childCoordinators: [Coordinator] = []
