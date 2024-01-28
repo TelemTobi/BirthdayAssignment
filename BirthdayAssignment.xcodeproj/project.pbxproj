@@ -31,6 +31,7 @@
 		7D3FAC8F2B66AD0B0069CA15 /* BirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */; };
 		7D3FAC912B66AF000069CA15 /* BirthdayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */; };
 		7D3FAC952B66D3E30069CA15 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */; };
+		7D3FAC982B66F0E70069CA15 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC972B66F0E70069CA15 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BirthdayViewController.storyboard; sourceTree = "<group>"; };
 		7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayFactory.swift; sourceTree = "<group>"; };
 		7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		7D3FAC972B66F0E70069CA15 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3FAC772B66A6130069CA15 /* Foundation */,
+				7D3FAC962B66F0D60069CA15 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +210,14 @@
 				7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */,
 			);
 			path = Birthday;
+			sourceTree = "<group>";
+		};
+		7D3FAC962B66F0D60069CA15 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC972B66F0E70069CA15 /* UIViewController+Extension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				7D3FAC752B66A4EB0069CA15 /* LoginRouter.swift in Sources */,
 				7D3FAC4D2B669FAF0069CA15 /* AppDelegate.swift in Sources */,
 				7D3FAC912B66AF000069CA15 /* BirthdayFactory.swift in Sources */,
+				7D3FAC982B66F0E70069CA15 /* UIViewController+Extension.swift in Sources */,
 				7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */,
 				7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */,
 				7D3FAC672B66A0820069CA15 /* ViewModel.swift in Sources */,
