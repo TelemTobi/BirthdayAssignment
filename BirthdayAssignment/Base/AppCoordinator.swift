@@ -31,8 +31,10 @@ class AppCoordinator: Coordinator, LoginRouter {
     // MARK: - Login
     
     private var loginViewController: UIViewController {
+        let baby = UserDefaults.standard.baby
+        
         let loginViewModel = LoginViewModel(
-            state: .init(), // TODO: Inject persisted data
+            state: .init(name: baby?.name, birthdate: baby?.birthdate, picture: baby?.picture),
             router: self
         )
         
@@ -40,7 +42,7 @@ class AppCoordinator: Coordinator, LoginRouter {
         return UIHostingController(rootView: loginView)
     }
     
-    func didLoginSuccessfuly() {
+    func didLoginSuccessfuly(baby: Baby) {
         // TODO: Progress to birthdayView
     }
 }

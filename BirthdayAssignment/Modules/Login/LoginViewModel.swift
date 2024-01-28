@@ -51,8 +51,18 @@ class LoginViewModel: ViewModel, ObservableObject {
             state.picture = data
             
         case .onProceedButtonTap:
-            // TODO: Persist data
-            router?.didLoginSuccessfuly()
+            guard let name = state.name,
+                  let birthdate = state.birthdate else { return }
+            
+            let baby = Baby(
+                name: name,
+                birthdate: birthdate,
+                picture: state.picture
+            )
+            
+            UserDefaults.standard.baby = baby
+            
+            router?.didLoginSuccessfuly(baby: baby)
         }
     }
 }

@@ -21,6 +21,8 @@
 		7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC782B66A61F0069CA15 /* String+Extension.swift */; };
 		7D3FAC7B2B66A6370069CA15 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7A2B66A6370069CA15 /* Date+Extension.swift */; };
 		7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */; };
+		7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */; };
+		7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC812B66A8670069CA15 /* Baby.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7D3FAC782B66A61F0069CA15 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7D3FAC7A2B66A6370069CA15 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturePicker.swift; sourceTree = "<group>"; };
+		7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		7D3FAC812B66A8670069CA15 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		7D3FAC4B2B669FAF0069CA15 /* BirthdayAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				7D3FAC802B66A85F0069CA15 /* Model */,
 				7D3FAC602B669FF10069CA15 /* Base */,
 				7D3FAC622B66A0000069CA15 /* Modules */,
 				7D3FAC612B669FF60069CA15 /* Resources */,
@@ -159,8 +164,17 @@
 			children = (
 				7D3FAC782B66A61F0069CA15 /* String+Extension.swift */,
 				7D3FAC7A2B66A6370069CA15 /* Date+Extension.swift */,
+				7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		7D3FAC802B66A85F0069CA15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC812B66A8670069CA15 /* Baby.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +256,11 @@
 				7D3FAC752B66A4EB0069CA15 /* LoginRouter.swift in Sources */,
 				7D3FAC4D2B669FAF0069CA15 /* AppDelegate.swift in Sources */,
 				7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */,
+				7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */,
 				7D3FAC672B66A0820069CA15 /* ViewModel.swift in Sources */,
 				7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */,
 				7D3FAC4F2B669FAF0069CA15 /* SceneDelegate.swift in Sources */,
+				7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

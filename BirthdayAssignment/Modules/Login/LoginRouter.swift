@@ -9,5 +9,5 @@ import Foundation
 
 protocol LoginRouter where Self : Coordinator {
     
-    func didLoginSuccessfuly()
+    func didLoginSuccessfuly(baby: Baby)
 }
