@@ -43,6 +43,19 @@ class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
     }
     
     func didLoginSuccessfuly(baby: Baby) {
-        // TODO: Progress to birthdayView
+        pushBirthdayViewController(baby)
+    }
+    
+    // MARK: - Birthday
+    
+    private func pushBirthdayViewController(_ baby: Baby) {
+        let viewModel = BirthdayViewModel(
+            state: .init(baby: baby),
+            router: self
+        )
+        
+        let viewController = BirthdayFactory.makeViewController(using: viewModel)
+        
+        push(viewController)
     }
 }

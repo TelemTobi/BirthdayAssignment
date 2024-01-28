@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Birthday View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BirthdayViewController" id="Y6W-OH-hqX" customClass="BirthdayViewController" customModule="BirthdayAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG_Pelican" translatesAutoresizingMaskIntoConstraints="NO" id="fht-8e-UbB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="bg_ blue"/>
+                        <constraints>
+                            <constraint firstItem="fht-8e-UbB" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="HFo-NJ-dFD"/>
+                            <constraint firstAttribute="bottom" secondItem="fht-8e-UbB" secondAttribute="bottom" id="Ztj-ZP-eBj"/>
+                            <constraint firstAttribute="trailing" secondItem="fht-8e-UbB" secondAttribute="trailing" id="t5l-7M-cjf"/>
+                            <constraint firstItem="fht-8e-UbB" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wSk-8g-xL7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qC0-uB-Hrh">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" style="plain" id="3P0-F7-0h9">
+                            <connections>
+                                <action selector="didTapShareButton" destination="Y6W-OH-hqX" id="TM3-9V-D7B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="fht-8e-UbB" id="NDz-1d-fXZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SzG-o0-9Ul">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bSh-pp-wvU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RI9-nj-cvk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="P7R-Lc-721"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4P-G2-IPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BG_Pelican" width="375" height="667"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <namedColor name="bg_ blue">
+            <color red="0.85490196078431369" green="0.94509803921568625" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

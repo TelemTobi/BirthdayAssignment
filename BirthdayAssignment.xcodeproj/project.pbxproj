@@ -26,6 +26,10 @@
 		7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC832B66AA960069CA15 /* CameraView.swift */; };
 		7D3FAC872B66ABE60069CA15 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */; };
 		7D3FAC892B66AC0E0069CA15 /* BirthdayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */; };
+		7D3FAC8B2B66ACE00069CA15 /* BirthdayTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */; };
+		7D3FAC8D2B66ACFF0069CA15 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8C2B66ACFF0069CA15 /* BirthdayViewController.swift */; };
+		7D3FAC8F2B66AD0B0069CA15 /* BirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */; };
+		7D3FAC912B66AF000069CA15 /* BirthdayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		7D3FAC832B66AA960069CA15 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
 		7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRouter.swift; sourceTree = "<group>"; };
+		7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTheme.swift; sourceTree = "<group>"; };
+		7D3FAC8C2B66ACFF0069CA15 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BirthdayViewController.storyboard; sourceTree = "<group>"; };
+		7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +196,12 @@
 		7D3FAC852B66ABC50069CA15 /* Birthday */ = {
 			isa = PBXGroup;
 			children = (
+				7D3FAC8C2B66ACFF0069CA15 /* BirthdayViewController.swift */,
+				7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */,
 				7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */,
 				7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */,
+				7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */,
+				7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */,
 			);
 			path = Birthday;
 			sourceTree = "<group>";
@@ -254,6 +266,7 @@
 			files = (
 				7D3FAC592B669FB10069CA15 /* LaunchScreen.storyboard in Resources */,
 				7D3FAC562B669FB10069CA15 /* Assets.xcassets in Resources */,
+				7D3FAC8F2B66AD0B0069CA15 /* BirthdayViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +285,17 @@
 				7D3FAC872B66ABE60069CA15 /* BirthdayViewModel.swift in Sources */,
 				7D3FAC692B66A0FA0069CA15 /* Coordinator.swift in Sources */,
 				7D3FAC732B66A4E30069CA15 /* LoginViewModel.swift in Sources */,
+				7D3FAC8D2B66ACFF0069CA15 /* BirthdayViewController.swift in Sources */,
 				7D3FAC752B66A4EB0069CA15 /* LoginRouter.swift in Sources */,
 				7D3FAC4D2B669FAF0069CA15 /* AppDelegate.swift in Sources */,
+				7D3FAC912B66AF000069CA15 /* BirthdayFactory.swift in Sources */,
 				7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */,
 				7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */,
 				7D3FAC672B66A0820069CA15 /* ViewModel.swift in Sources */,
 				7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */,
 				7D3FAC4F2B669FAF0069CA15 /* SceneDelegate.swift in Sources */,
 				7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */,
+				7D3FAC8B2B66ACE00069CA15 /* BirthdayTheme.swift in Sources */,
 				7D3FAC892B66AC0E0069CA15 /* BirthdayRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

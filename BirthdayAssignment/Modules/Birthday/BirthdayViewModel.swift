@@ -38,10 +38,14 @@ class BirthdayViewModel: ViewModel, ObservableObject {
     
     enum Action {
         case setPicute(Data?)
+        case onBackButtonTap
     }
     
     func send(_ action: Action) {
         switch action {
+        case .onBackButtonTap:
+            router?.didTapBackButton()
+            
         case let .setPicute(data):
             state.baby.picture = data
             UserDefaults.standard.baby = state.baby
