@@ -23,6 +23,7 @@
 		7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */; };
 		7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */; };
 		7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC812B66A8670069CA15 /* Baby.swift */; };
+		7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC832B66AA960069CA15 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturePicker.swift; sourceTree = "<group>"; };
 		7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		7D3FAC812B66A8670069CA15 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
+		7D3FAC832B66AA960069CA15 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */,
+				7D3FAC832B66AA960069CA15 /* CameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				7D3FAC6E2B66A32B0069CA15 /* AppCoordinator.swift in Sources */,
 				7D3FAC7B2B66A6370069CA15 /* Date+Extension.swift in Sources */,
 				7D3FAC712B66A4DA0069CA15 /* LoginView.swift in Sources */,
+				7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */,
 				7D3FAC6B2B66A2080069CA15 /* Constants.swift in Sources */,
 				7D3FAC692B66A0FA0069CA15 /* Coordinator.swift in Sources */,
 				7D3FAC732B66A4E30069CA15 /* LoginViewModel.swift in Sources */,
