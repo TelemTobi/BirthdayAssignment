@@ -37,6 +37,19 @@ struct LoginView: View {
                     displayedComponents: .date
                 )
                 
+                PicturePicker(
+                    selection: viewModel.binding(
+                        get: \.picture,
+                        send: LoginViewModel.Action.setPicute
+                    ),
+                    label: {
+                        Label(
+                            "Select a picture",
+                            systemImage: viewModel.state.hasPicture ? "checkmark" : "photo"
+                        )
+                    }
+                )
+                
             } footer: {
                 Button(
                     action: { viewModel.send(.onProceedButtonTap) },
