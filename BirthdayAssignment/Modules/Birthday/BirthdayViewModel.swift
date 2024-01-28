@@ -5,7 +5,7 @@
 //  Created by Telem Tobi on 28/01/2024.
 //
 
-import SwiftUI
+import Foundation
 
 class BirthdayViewModel: ViewModel, ObservableObject {
     
@@ -20,7 +20,7 @@ class BirthdayViewModel: ViewModel, ObservableObject {
     struct State: Equatable, Hashable {
         var baby: Baby
         
-        var title: LocalizedStringKey {
+        var title: String {
             "TODAY \(baby.name.uppercased()) IS"
         }
         
@@ -29,7 +29,7 @@ class BirthdayViewModel: ViewModel, ObservableObject {
             return monthsAge < 12 ? monthsAge : monthsAge / 12
         }
         
-        var subtitle: LocalizedStringKey {
+        var subtitle: String {
             let monthsAge = baby.birthdate.monthsPassed
             return if monthsAge < 12 { monthsAge == 1 ? "MONTH OLD" : "MONTHS OLD" }
             else { (monthsAge / 12) == 1 ? "YEAR OLD" : "YEARS OLD" }
