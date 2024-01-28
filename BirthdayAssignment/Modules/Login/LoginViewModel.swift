@@ -51,7 +51,8 @@ class LoginViewModel: ViewModel, ObservableObject {
             state.picture = data
             
         case .onProceedButtonTap:
-            break // TODO: Proceed to Birthday screen
+            // TODO: Persist data
+            router?.didLoginSuccessfuly()
         }
     }
 }
