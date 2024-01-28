@@ -30,6 +30,7 @@
 		7D3FAC8D2B66ACFF0069CA15 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8C2B66ACFF0069CA15 /* BirthdayViewController.swift */; };
 		7D3FAC8F2B66AD0B0069CA15 /* BirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */; };
 		7D3FAC912B66AF000069CA15 /* BirthdayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */; };
+		7D3FAC952B66D3E30069CA15 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		7D3FAC8C2B66ACFF0069CA15 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		7D3FAC8E2B66AD0B0069CA15 /* BirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BirthdayViewController.storyboard; sourceTree = "<group>"; };
 		7D3FAC902B66AF000069CA15 /* BirthdayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayFactory.swift; sourceTree = "<group>"; };
+		7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */,
 				7D3FAC832B66AA960069CA15 /* CameraView.swift */,
+				7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */,
 				7D3FAC672B66A0820069CA15 /* ViewModel.swift in Sources */,
 				7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */,
+				7D3FAC952B66D3E30069CA15 /* CircleImageView.swift in Sources */,
 				7D3FAC4F2B669FAF0069CA15 /* SceneDelegate.swift in Sources */,
 				7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */,
 				7D3FAC8B2B66ACE00069CA15 /* BirthdayTheme.swift in Sources */,

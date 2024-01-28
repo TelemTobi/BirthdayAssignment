@@ -10,6 +10,7 @@ import SwiftUI
 
 class BirthdayViewController: UIViewController {
     
+    @IBOutlet private weak var contentView: UIStackView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var ageImageView: UIImageView!
@@ -31,14 +32,28 @@ class BirthdayViewController: UIViewController {
         setupUI()
     }
     
-    
     private func setupUI() {
-        view.backgroundColor = UIColor(resource: theme.backgroundColor)
-        backgroundImageView.image = UIImage(resource: theme.backgroundResource)
-        contentTopConstraint.constant -= navigationController?.navigationBar.frame.height ?? .zero
-        
+        setupTheme()
+        setupConstraints()
         setupBabyInfo()
         setupBabyImageView()
+    }
+    
+    private func setupTheme() {
+        view.backgroundColor = UIColor(resource: theme.backgroundColor)
+        backgroundImageView.image = UIImage(resource: theme.backgroundResource)
+    }
+    
+    private func setupConstraints() {
+        contentTopConstraint.constant -= navigationController?.navigationBar.frame.height ?? .zero
+        
+        let contentLeading = contentView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 50)
+        contentLeading.priority = .defaultHigh
+        contentLeading.isActive = true
+        
+        let contentTrailing = contentView.trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: 50)
+        contentTrailing.priority = .defaultHigh
+        contentTrailing.isActive = true
     }
     
     private func setupBabyInfo() {
@@ -48,11 +63,6 @@ class BirthdayViewController: UIViewController {
     }
     
     private func setupBabyImageView() {
-        let imageWidth = babyImageView.frame.width
-        let imageHeight = babyImageView.frame.height
-        
-        babyImageView.layer.masksToBounds = true
-        babyImageView.layer.cornerRadius = max(imageWidth, imageHeight) / 2
         babyImageView.layer.borderWidth = 7
         babyImageView.layer.borderColor = UIColor(resource: theme.foregroundColor).cgColor
         
