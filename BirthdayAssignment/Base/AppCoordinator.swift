@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwiftUI
 
-class AppCoordinator: Coordinator {
+class AppCoordinator: Coordinator, LoginRouter {
     
     var window: UIWindow
     var childCoordinators: [Coordinator] = []
@@ -18,6 +19,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         let navigationController = UINavigationController(rootViewController: loginViewController)
+        navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
@@ -26,11 +28,21 @@ class AppCoordinator: Coordinator {
         // Won't finish as its the root coordinator
     }
     
-    // MARK: - Main Screen
+    // MARK: - Login
     
     private var loginViewController: UIViewController {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
-        return vc
+        let baby = UserDefaults.standard.baby
+        
+        let loginViewModel = LoginViewModel(
+            state: .init(name: baby?.name, birthdate: baby?.birthdate, picture: baby?.picture),
+            router: self
+        )
+        
+        let loginView = LoginView(viewModel: loginViewModel)
+        return UIHostingController(rootView: loginView)
+    }
+    
+    func didLoginSuccessfuly(baby: Baby) {
+        // TODO: Progress to birthdayView
     }
 }

@@ -15,6 +15,15 @@
 		7D3FAC692B66A0FA0069CA15 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC682B66A0FA0069CA15 /* Coordinator.swift */; };
 		7D3FAC6B2B66A2080069CA15 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC6A2B66A2080069CA15 /* Constants.swift */; };
 		7D3FAC6E2B66A32B0069CA15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC6D2B66A32B0069CA15 /* AppCoordinator.swift */; };
+		7D3FAC712B66A4DA0069CA15 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC702B66A4DA0069CA15 /* LoginView.swift */; };
+		7D3FAC732B66A4E30069CA15 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC722B66A4E30069CA15 /* LoginViewModel.swift */; };
+		7D3FAC752B66A4EB0069CA15 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC742B66A4EB0069CA15 /* LoginRouter.swift */; };
+		7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC782B66A61F0069CA15 /* String+Extension.swift */; };
+		7D3FAC7B2B66A6370069CA15 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7A2B66A6370069CA15 /* Date+Extension.swift */; };
+		7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */; };
+		7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */; };
+		7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC812B66A8670069CA15 /* Baby.swift */; };
+		7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC832B66AA960069CA15 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		7D3FAC682B66A0FA0069CA15 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7D3FAC6A2B66A2080069CA15 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7D3FAC6D2B66A32B0069CA15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7D3FAC702B66A4DA0069CA15 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7D3FAC722B66A4E30069CA15 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7D3FAC742B66A4EB0069CA15 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		7D3FAC782B66A61F0069CA15 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7D3FAC7A2B66A6370069CA15 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturePicker.swift; sourceTree = "<group>"; };
+		7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		7D3FAC812B66A8670069CA15 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
+		7D3FAC832B66AA960069CA15 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,7 @@
 		7D3FAC4B2B669FAF0069CA15 /* BirthdayAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				7D3FAC802B66A85F0069CA15 /* Model */,
 				7D3FAC602B669FF10069CA15 /* Base */,
 				7D3FAC622B66A0000069CA15 /* Modules */,
 				7D3FAC612B669FF60069CA15 /* Resources */,
@@ -93,6 +112,7 @@
 		7D3FAC622B66A0000069CA15 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7D3FAC6F2B66A4CF0069CA15 /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -100,6 +120,7 @@
 		7D3FAC632B66A0050069CA15 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7D3FAC762B66A60E0069CA15 /* Extensions */,
 				7D3FAC6C2B66A3120069CA15 /* Protocols */,
 			);
 			path = Utility;
@@ -108,6 +129,8 @@
 		7D3FAC642B66A00C0069CA15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */,
+				7D3FAC832B66AA960069CA15 /* CameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +142,42 @@
 				7D3FAC662B66A0820069CA15 /* ViewModel.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7D3FAC6F2B66A4CF0069CA15 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC702B66A4DA0069CA15 /* LoginView.swift */,
+				7D3FAC722B66A4E30069CA15 /* LoginViewModel.swift */,
+				7D3FAC742B66A4EB0069CA15 /* LoginRouter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7D3FAC762B66A60E0069CA15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC772B66A6130069CA15 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7D3FAC772B66A6130069CA15 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC782B66A61F0069CA15 /* String+Extension.swift */,
+				7D3FAC7A2B66A6370069CA15 /* Date+Extension.swift */,
+				7D3FAC7E2B66A8560069CA15 /* UserDefaults+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		7D3FAC802B66A85F0069CA15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3FAC812B66A8670069CA15 /* Baby.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,11 +251,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3FAC6E2B66A32B0069CA15 /* AppCoordinator.swift in Sources */,
+				7D3FAC7B2B66A6370069CA15 /* Date+Extension.swift in Sources */,
+				7D3FAC712B66A4DA0069CA15 /* LoginView.swift in Sources */,
+				7D3FAC842B66AA960069CA15 /* CameraView.swift in Sources */,
 				7D3FAC6B2B66A2080069CA15 /* Constants.swift in Sources */,
 				7D3FAC692B66A0FA0069CA15 /* Coordinator.swift in Sources */,
+				7D3FAC732B66A4E30069CA15 /* LoginViewModel.swift in Sources */,
+				7D3FAC752B66A4EB0069CA15 /* LoginRouter.swift in Sources */,
 				7D3FAC4D2B669FAF0069CA15 /* AppDelegate.swift in Sources */,
+				7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */,
+				7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */,
 				7D3FAC672B66A0820069CA15 /* ViewModel.swift in Sources */,
+				7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */,
 				7D3FAC4F2B669FAF0069CA15 /* SceneDelegate.swift in Sources */,
+				7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +411,8 @@
 				DEVELOPMENT_TEAM = 765F9357QN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirthdayAssignment/Base/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take a photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to pick a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -370,6 +440,8 @@
 				DEVELOPMENT_TEAM = 765F9357QN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirthdayAssignment/Base/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take a photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to pick a photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
