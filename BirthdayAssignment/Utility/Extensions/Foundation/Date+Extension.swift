@@ -10,4 +10,8 @@ import Foundation
 extension Date {
     
     static var current: Date { Date() }
+    
+    var monthsPassed: Int {
+        Calendar(identifier: .gregorian).dateComponents([.month], from: self, to: Date()).month ?? .zero
+    }
 }

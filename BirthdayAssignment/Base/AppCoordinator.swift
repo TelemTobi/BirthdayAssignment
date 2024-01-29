@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class AppCoordinator: Coordinator, LoginRouter {
+class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
     
     var window: UIWindow
     var childCoordinators: [Coordinator] = []
@@ -43,6 +43,20 @@ class AppCoordinator: Coordinator, LoginRouter {
     }
     
     func didLoginSuccessfuly(baby: Baby) {
-        // TODO: Progress to birthdayView
+        pushBirthdayViewController(baby)
+    }
+    
+    // MARK: - Birthday
+    
+    private func pushBirthdayViewController(_ baby: Baby) {
+        let birthdayViewModel = BirthdayViewModel(
+            state: .init(baby: baby),
+            router: self
+        )
+        
+        let birthdayView = BirthdayView(viewModel: birthdayViewModel)
+//        let viewController = BirthdayFactory.makeViewController(using: viewModel)
+        let hostingController = UIHostingController(rootView: birthdayView)
+        push(hostingController)
     }
 }
