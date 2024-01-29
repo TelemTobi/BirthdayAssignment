@@ -11,7 +11,8 @@ For this project, I opted for the MVVM architecture. Each view model conforms to
 
 The ViewModel protocol also provides handy methods, like binding for example, which derives bindings from the viewModel. This approach prevents direct writes to the state and encourages sending actions to the viewModel instead.
 
-Here's a visual representation of the data flow: [Insert data flow image]
+Here's a visual representation of the data flow:
+![Alt text](data_flow.png "Data Flow")
 
 ## UI
 The user interface is built using a combination of SwiftUI and UIKit. This hybrid approach was chosen to tackle the complex UI of the birthday screen, leveraging UIKit's constraint-based system. 
