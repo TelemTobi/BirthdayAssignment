@@ -49,13 +49,14 @@ class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
     // MARK: - Birthday
     
     private func pushBirthdayViewController(_ baby: Baby) {
-        let viewModel = BirthdayViewModel(
+        let birthdayViewModel = BirthdayViewModel(
             state: .init(baby: baby),
             router: self
         )
         
-        let viewController = BirthdayFactory.makeViewController(using: viewModel)
-        
-        push(viewController)
+        let birthdayView = BirthdayView(viewModel: birthdayViewModel)
+//        let viewController = BirthdayFactory.makeViewController(using: viewModel)
+        let hostingController = UIHostingController(rootView: birthdayView)
+        push(hostingController)
     }
 }

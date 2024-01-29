@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension BirthdayViewController {
+extension BirthdayContent {
     
     enum Theme: CaseIterable {
         case yellow, green, blue
