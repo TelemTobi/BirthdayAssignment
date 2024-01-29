@@ -37,15 +37,15 @@ class BirthdayViewModel: ViewModel, ObservableObject {
     }
     
     enum Action {
-        case onBackButtonTap
+        case onCloseButtonTap
         case onShareButtonTap(UIImage, String)
         case setPicture(Data?)
     }
     
     func send(_ action: Action) {
         switch action {
-        case .onBackButtonTap:
-            router?.didTapBackButton()
+        case .onCloseButtonTap:
+            router?.didTapCloseButton()
         
         case let .onShareButtonTap(snapshot, message):
             router?.share(snapshot, message: message)

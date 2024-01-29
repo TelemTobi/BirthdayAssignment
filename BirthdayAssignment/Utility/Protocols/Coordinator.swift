@@ -85,13 +85,13 @@ extension Coordinator {
         rootViewController()?.navigationController?.popViewController(animated: animated)
     }
     
-    func present(_ viewController: UIViewController, presentationStyle: UIModalPresentationStyle = .automatic, transitionStyle: UIModalTransitionStyle = .coverVertical, animated: Bool = true, completion: EmptyClosure? = nil) {
+    func present(_ viewController: UIViewController, presentationStyle: UIModalPresentationStyle = .automatic, transitionStyle: UIModalTransitionStyle = .coverVertical, animated: Bool = true, completion: (() -> Void)? = nil) {
         viewController.modalPresentationStyle = presentationStyle
         viewController.modalTransitionStyle = transitionStyle
         rootViewController()?.present(viewController, animated: animated, completion: completion)
     }
     
-    func dismiss(animated: Bool = true, completion: EmptyClosure? = nil) {
+    func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
         rootViewController()?.dismiss(animated: animated, completion: completion)
     }
     

@@ -10,7 +10,6 @@ import SwiftUI
 struct BirthdayView: View {
     
     @ObservedObject private var viewModel: BirthdayViewModel
-    @Environment(\.dismiss) private var dismiss
 
     private let theme = Theme.allCases.randomElement() ?? .blue
     
@@ -66,9 +65,9 @@ struct BirthdayView: View {
         
         ToolbarItem(placement: .navigationBarLeading) {
             Button(
-                action: { dismiss() },
+                action: { viewModel.send(.onCloseButtonTap) },
                 label: {
-                    Image(systemName: "arrow.backward")
+                    Image(systemName: "xmark")
                         .foregroundColor(.primary)
                 }
             )
