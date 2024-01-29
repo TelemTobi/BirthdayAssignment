@@ -119,13 +119,24 @@ class BirthdayContent: UIView {
     func setBabyImage(_ binding: Binding<Data?>) {
         self.pictureBinding = binding
         
-        DispatchQueue.main.async {
+        let setImage = { [weak self] in
+            guard let self else { return }
+            
             guard let data = binding.wrappedValue, let image = UIImage(data: data) else {
-                self.babyImageView.image = UIImage(resource: self.theme.picturePlaceholder)
+                babyImageView.image = UIImage(resource: theme.picturePlaceholder)
                 return
             }
             
-            self.babyImageView.image = image
+            babyImageView.image = image
+        }
+        
+        if isSnapshot {
+            setImage()
+            return
+        }
+        
+        DispatchQueue.main.async {
+            setImage()
         }
     }
 }

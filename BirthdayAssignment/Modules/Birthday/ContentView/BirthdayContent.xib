@@ -107,7 +107,7 @@
     <resources>
         <image name="5" width="63" height="90"/>
         <image name="BG_Pelican" width="375" height="667"/>
-        <image name="Default_place_holder_blue" width="221" height="221"/>
+        <image name="Default_place_holder_blue" width="664" height="664"/>
         <image name="Left_swirls" width="52" height="45"/>
         <image name="Nanit_Logo" width="57" height="20"/>
         <image name="Right_swirls" width="52" height="45"/>
