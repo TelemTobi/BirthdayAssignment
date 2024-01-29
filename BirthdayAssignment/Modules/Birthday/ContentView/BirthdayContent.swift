@@ -40,7 +40,6 @@ struct BirthdayContentView: UIViewRepresentable {
 
 class BirthdayContent: UIView {
     
-    @IBOutlet private weak var contentView: UIStackView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var ageImageView: UIImageView!
@@ -50,9 +49,8 @@ class BirthdayContent: UIView {
     
     private var theme: BirthdayView.Theme = .blue
     private var pictureBinding: Binding<Data?> = .empty()
-    
-    private var didSetup: Bool = false
     private var isSnapshot: Bool = false
+    private var didSetup: Bool = false
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -60,22 +58,8 @@ class BirthdayContent: UIView {
         guard !didSetup else { return }
         didSetup.toggle()
         
-        setupContraints()
         setupCameraButton()
-    }
-    
-    private func setupContraints() {
         contentTopConstraint.constant -= hostingController?.navigationController?.navigationBar.frame.height ?? .zero
-        
-        let contentLeading = contentView.leadingAnchor
-            .constraint(greaterThanOrEqualTo: leadingAnchor, constant: 50)
-        contentLeading.priority = .defaultHigh
-        contentLeading.isActive = true
-        
-        let contentTrailing = contentView.trailingAnchor
-            .constraint(greaterThanOrEqualTo: trailingAnchor, constant: 50)
-        contentTrailing.priority = .defaultHigh
-        contentTrailing.isActive = true
     }
     
     private func setupCameraButton() {
@@ -92,16 +76,20 @@ class BirthdayContent: UIView {
         cameraButton.centerXAnchor.constraint(equalTo: babyImageView.centerXAnchor).isActive = true
         cameraButton.centerYAnchor.constraint(equalTo: babyImageView.centerYAnchor).isActive = true
         
+        alignCameraButton(cameraButton)
+        
         (babyImageView as? CircularImageView)?.onSubviewsLayout = { [weak self] in
-            guard let self else { return }
-            
-            let imageViewWidth = babyImageView.bounds.size.width
-            
-            cameraButton.transform = CGAffineTransform(
-                translationX: cos(Angle(degrees: -45).radians) * (imageViewWidth / 2),
-                y: sin(Angle(degrees: -45).radians) * (imageViewWidth / 2)
-            )
+            self?.alignCameraButton(cameraButton)
         }
+    }
+    
+    private func alignCameraButton(_ button: UIView) {
+        let imageViewWidth = babyImageView.bounds.size.width
+        
+        button.transform = CGAffineTransform(
+            translationX: cos(Angle(degrees: -45).radians) * (imageViewWidth / 2),
+            y: sin(Angle(degrees: -45).radians) * (imageViewWidth / 2)
+        )
     }
     
     func set(theme: BirthdayView.Theme, title: String, subtitle: String, age: Int, pictureBinding: Binding<Data?>, isSnapshot: Bool) {
