@@ -43,20 +43,30 @@ class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
     }
     
     func didLoginSuccessfuly(baby: Baby) {
-        pushBirthdayViewController(baby)
+        presentBirthdayViewController(baby)
     }
     
     // MARK: - Birthday
     
-    private func pushBirthdayViewController(_ baby: Baby) {
+    private func presentBirthdayViewController(_ baby: Baby) {
         let birthdayViewModel = BirthdayViewModel(
             state: .init(baby: baby),
             router: self
         )
         
         let birthdayView = BirthdayView(viewModel: birthdayViewModel)
-//        let viewController = BirthdayFactory.makeViewController(using: viewModel)
         let hostingController = UIHostingController(rootView: birthdayView)
-        push(hostingController)
+        let navigationController = UINavigationController(rootViewController: hostingController)
+        present(navigationController, presentationStyle: .fullScreen)
+    }
+    
+    func share(_ snapshot: UIImage, message: String) {
+        let activityController = UIActivityViewController(activityItems: [snapshot, message], applicationActivities: nil)
+        activityController.popoverPresentationController?.sourceView = rootViewController()?.navigationController?.navigationBar
+        present(activityController)
+    }
+    
+    func didTapCloseButton() {
+        dismiss()
     }
 }
