@@ -27,11 +27,13 @@
 		7D3FAC872B66ABE60069CA15 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */; };
 		7D3FAC892B66AC0E0069CA15 /* BirthdayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */; };
 		7D3FAC8B2B66ACE00069CA15 /* BirthdayTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */; };
-		7D3FAC952B66D3E30069CA15 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */; };
+		7D3FAC952B66D3E30069CA15 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC942B66D3E30069CA15 /* CircularImageView.swift */; };
 		7D3FAC982B66F0E70069CA15 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FAC972B66F0E70069CA15 /* UIView+Extension.swift */; };
 		7D8A0A752B6779080092F449 /* BirthdayContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A0A742B6779080092F449 /* BirthdayContent.xib */; };
 		7D8A0A772B6779130092F449 /* BirthdayContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A0A762B6779130092F449 /* BirthdayContent.swift */; };
 		7D8A0A792B6786680092F449 /* BirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A0A782B6786680092F449 /* BirthdayView.swift */; };
+		7DFA5DE92B6795AD004075E3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFA5DE82B6795AD004075E3 /* View+Extension.swift */; };
+		7DFA5DEB2B67A979004075E3 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFA5DEA2B67A979004075E3 /* Binding+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,11 +59,13 @@
 		7D3FAC862B66ABE60069CA15 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
 		7D3FAC882B66AC0E0069CA15 /* BirthdayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRouter.swift; sourceTree = "<group>"; };
 		7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTheme.swift; sourceTree = "<group>"; };
-		7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		7D3FAC942B66D3E30069CA15 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		7D3FAC972B66F0E70069CA15 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7D8A0A742B6779080092F449 /* BirthdayContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirthdayContent.xib; sourceTree = "<group>"; };
 		7D8A0A762B6779130092F449 /* BirthdayContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayContent.swift; sourceTree = "<group>"; };
 		7D8A0A782B6786680092F449 /* BirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayView.swift; sourceTree = "<group>"; };
+		7DFA5DE82B6795AD004075E3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		7DFA5DEA2B67A979004075E3 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +152,7 @@
 			children = (
 				7D3FAC7C2B66A69A0069CA15 /* PicturePicker.swift */,
 				7D3FAC832B66AA960069CA15 /* CameraView.swift */,
-				7D3FAC942B66D3E30069CA15 /* CircleImageView.swift */,
+				7D3FAC942B66D3E30069CA15 /* CircularImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 			children = (
 				7D3FAC772B66A6130069CA15 /* Foundation */,
 				7D3FAC962B66F0D60069CA15 /* UIKit */,
+				7DFA5DE72B67959A004075E3 /* SwiftUI */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +231,15 @@
 				7D3FAC8A2B66ACE00069CA15 /* BirthdayTheme.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		7DFA5DE72B67959A004075E3 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				7DFA5DE82B6795AD004075E3 /* View+Extension.swift */,
+				7DFA5DEA2B67A979004075E3 /* Binding+Extension.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,15 +326,17 @@
 				7D3FAC4D2B669FAF0069CA15 /* AppDelegate.swift in Sources */,
 				7D3FAC982B66F0E70069CA15 /* UIView+Extension.swift in Sources */,
 				7D3FAC7D2B66A69A0069CA15 /* PicturePicker.swift in Sources */,
+				7DFA5DEB2B67A979004075E3 /* Binding+Extension.swift in Sources */,
 				7D8A0A792B6786680092F449 /* BirthdayView.swift in Sources */,
 				7D3FAC7F2B66A8560069CA15 /* UserDefaults+Extension.swift in Sources */,
 				7D3FAC672B66A0820069CA15 /* ViewModel.swift in Sources */,
 				7D3FAC792B66A61F0069CA15 /* String+Extension.swift in Sources */,
-				7D3FAC952B66D3E30069CA15 /* CircleImageView.swift in Sources */,
+				7D3FAC952B66D3E30069CA15 /* CircularImageView.swift in Sources */,
 				7D3FAC4F2B669FAF0069CA15 /* SceneDelegate.swift in Sources */,
 				7D3FAC822B66A8670069CA15 /* Baby.swift in Sources */,
 				7D3FAC8B2B66ACE00069CA15 /* BirthdayTheme.swift in Sources */,
 				7D3FAC892B66AC0E0069CA15 /* BirthdayRouter.swift in Sources */,
+				7DFA5DE92B6795AD004075E3 /* View+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

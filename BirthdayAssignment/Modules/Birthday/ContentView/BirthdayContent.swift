@@ -10,18 +10,26 @@ import SwiftUI
 
 struct BirthdayContentView: UIViewRepresentable {
     
+    let theme: BirthdayView.Theme
     let title: String
     let age: Int
     let subtitle: String
-    
     @Binding var imageData: Data?
+    var isSnapshot: Bool = false
     
-    func makeUIView(context: Context) -> BirthdayContent {
+    func makeUIView(context: Context) -> UIView {
         let uiView = UINib(nibName: String(describing: BirthdayContent.self), bundle: .main)
             .instantiate(withOwner: self).first as! BirthdayContent
         
-        uiView.setBabyInfo(title, subtitle, age)
-        uiView.setBabyImage($imageData)
+        uiView.set(
+            theme: theme,
+            title: title,
+            subtitle: subtitle,
+            age: age,
+            pictureBinding: $imageData,
+            isSnapshot: isSnapshot
+        )
+        
         return uiView
     }
     
@@ -40,27 +48,25 @@ class BirthdayContent: UIView {
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var contentTopConstraint: NSLayoutConstraint!
     
-    private let theme = Theme.allCases.randomElement() ?? .blue
-    private var pictureBinding: Binding<Data?>?
+    private var theme: BirthdayView.Theme = .blue
+    private var pictureBinding: Binding<Data?> = .empty()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
+    private var didSetup: Bool = false
+    private var isSnapshot: Bool = false
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        setupCameraButton()
-        contentTopConstraint.constant -= hostingController?.navigationController?.navigationBar.frame.height ?? .zero
-    }
-    
-    private func setup() {
+        guard !didSetup else { return }
+        didSetup.toggle()
+        
         setupContraints()
-        setupTheme()
+        setupCameraButton()
     }
     
     private func setupContraints() {
+        contentTopConstraint.constant -= hostingController?.navigationController?.navigationBar.frame.height ?? .zero
+        
         let contentLeading = contentView.leadingAnchor
             .constraint(greaterThanOrEqualTo: leadingAnchor, constant: 50)
         contentLeading.priority = .defaultHigh
@@ -72,17 +78,8 @@ class BirthdayContent: UIView {
         contentTrailing.isActive = true
     }
     
-    private func setupTheme() {
-        backgroundColor = UIColor(resource: theme.backgroundColor)
-        backgroundImageView.image = UIImage(resource: theme.backgroundResource)
-        
-        babyImageView.layer.borderWidth = 7
-        babyImageView.image = UIImage(resource: theme.picturePlaceholder)
-        babyImageView.layer.borderColor = UIColor(resource: theme.foregroundColor).cgColor
-    }
-    
     private func setupCameraButton() {
-        guard let pictureBinding else { return }
+        guard !isSnapshot else { return }
         
         let cameraButton = addSwiftUIView(
             PicturePicker(
@@ -107,7 +104,25 @@ class BirthdayContent: UIView {
         }
     }
     
-    func setBabyInfo(_ title: String, _ subtitle: String, _ age: Int) {
+    func set(theme: BirthdayView.Theme, title: String, subtitle: String, age: Int, pictureBinding: Binding<Data?>, isSnapshot: Bool) {
+        self.theme = theme
+        self.isSnapshot = isSnapshot
+        
+        setupTheme()
+        setBabyInfo(title, subtitle, age)
+        setBabyImage(pictureBinding)
+    }
+    
+    private func setupTheme() {
+        backgroundColor = UIColor(resource: theme.backgroundColor)
+        backgroundImageView.image = UIImage(resource: theme.backgroundResource)
+        
+        babyImageView.layer.borderWidth = 7
+        babyImageView.image = UIImage(resource: theme.picturePlaceholder)
+        babyImageView.layer.borderColor = UIColor(resource: theme.foregroundColor).cgColor
+    }
+    
+    private func setBabyInfo(_ title: String, _ subtitle: String, _ age: Int) {
         titleLabel.text = title
         subtitleLabel.text = subtitle
         ageImageView.image = UIImage(named: age.description)

@@ -55,8 +55,11 @@ class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
         )
         
         let birthdayView = BirthdayView(viewModel: birthdayViewModel)
-//        let viewController = BirthdayFactory.makeViewController(using: viewModel)
         let hostingController = UIHostingController(rootView: birthdayView)
         push(hostingController)
+    }
+    
+    func share(_ snapshot: UIImage, message: String) {
+        present(UIActivityViewController(activityItems: [snapshot, message], applicationActivities: nil))
     }
 }

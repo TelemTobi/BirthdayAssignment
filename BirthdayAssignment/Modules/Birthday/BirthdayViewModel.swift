@@ -5,7 +5,7 @@
 //  Created by Telem Tobi on 28/01/2024.
 //
 
-import Foundation
+import SwiftUI
 
 class BirthdayViewModel: ViewModel, ObservableObject {
     
@@ -38,8 +38,8 @@ class BirthdayViewModel: ViewModel, ObservableObject {
     
     enum Action {
         case onBackButtonTap
-        case onShareButtonTap
-        case setPicute(Data?)
+        case onShareButtonTap(UIImage, String)
+        case setPicture(Data?)
     }
     
     func send(_ action: Action) {
@@ -47,10 +47,10 @@ class BirthdayViewModel: ViewModel, ObservableObject {
         case .onBackButtonTap:
             router?.didTapBackButton()
         
-        case .onShareButtonTap:
-            break
+        case let .onShareButtonTap(snapshot, message):
+            router?.share(snapshot, message: message)
             
-        case let .setPicute(data):
+        case let .setPicture(data):
             state.baby.picture = data
             UserDefaults.standard.baby = state.baby
         }
