@@ -24,6 +24,7 @@ struct BirthdayView: View {
                 .toolbar { toolbarContent(geometry) }
                 .navigationBarBackButtonHidden()
         }
+        .ignoresSafeArea()
     }
     
     @ViewBuilder

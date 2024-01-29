@@ -56,10 +56,13 @@ class AppCoordinator: Coordinator, LoginRouter, BirthdayRouter {
         
         let birthdayView = BirthdayView(viewModel: birthdayViewModel)
         let hostingController = UIHostingController(rootView: birthdayView)
+        hostingController.navigationItem.hidesBackButton = true
         push(hostingController)
     }
     
     func share(_ snapshot: UIImage, message: String) {
-        present(UIActivityViewController(activityItems: [snapshot, message], applicationActivities: nil))
+        let activityController = UIActivityViewController(activityItems: [snapshot, message], applicationActivities: nil)
+        activityController.popoverPresentationController?.sourceView = rootViewController()?.navigationController?.navigationBar
+        present(activityController)
     }
 }

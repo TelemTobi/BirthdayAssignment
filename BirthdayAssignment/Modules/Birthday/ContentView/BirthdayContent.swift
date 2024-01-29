@@ -17,7 +17,7 @@ struct BirthdayContentView: UIViewRepresentable {
     @Binding var imageData: Data?
     var isSnapshot: Bool = false
     
-    func makeUIView(context: Context) -> UIView {
+    func makeUIView(context: Context) -> BirthdayContent {
         let uiView = UINib(nibName: String(describing: BirthdayContent.self), bundle: .main)
             .instantiate(withOwner: self).first as! BirthdayContent
         
